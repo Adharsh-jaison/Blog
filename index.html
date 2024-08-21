@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Analytics</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Intro Section */
+        .intro {
+            background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            color: #fff;
+            padding: 150px 20px;
+            text-align: center;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .intro h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+        }
+
+        /* Main Layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .content ol {
+            margin-left: 20px;
+        }
+
+        .content ol li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Page Visibility */
+        .page {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .intro h2 {
+                font-size: 3rem;
+            }
+
+            .intro p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>web blogs</h1>
+        <nav>
+            <a href="#home" onclick="showPage('home')">Home</a>
+            <a href="#tag-manager" onclick="showPage('tag-manager')">Google Tag Manager</a>
+            <a href="#analytics" onclick="showPage('analytics')">Google Analytics 4</a>
+        </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro page" style="display: block;">
+        <h2>WEB ANALYTICS</h2>
+        <p>Explore expert guides on Google Tag Manager, Google Analytics 4, and more.</p>
+    </section>
+
+    <!-- Content Sections Container -->
+    <div class="container">
+
+        <!-- Google Tag Manager Page -->
+        <section id="tag-manager" class="content page">
+            <h2>How to Create an Account in Google Tag Manager</h2>
+            <ol>
+                <li>
+                    <strong>Go to the Google Tag Manager website:</strong> Open your web browser and navigate to
+                    <a href="https://tagmanager.google.com" target="_blank">tagmanager.google.com</a>.
+                </li>
+                <li>
+                    <strong>Sign in with your Google account:</strong> If you’re not already signed in, you’ll be prompted to log in using your Google credentials.
+                </li>
+                <li>
+                    <strong>Create a new account:</strong> Click on the “Create Account” button. Fill in your account name (usually your company name), and select your country.
+                </li>
+                <li>
+                    <strong>Set up a container:</strong> After creating your account, you’ll need to set up a container. A container holds all your tags. Give it a name (e.g., your website’s name), select where you’ll use the container (Web, iOS, Android, AMP), and click “Create.”
+                </li>
+                <li>
+                    <strong>Accept the terms of service:</strong> Review and accept the Google Tag Manager Terms of Service Agreement.
+                </li>
+                <li>
+                    <strong>Install the container code on your website:</strong> After creating your container, you’ll be provided with a snippet of code. Copy this code and paste it into your website’s code, typically before the closing <code>&lt;/head&gt;</code> tag.
+                </li>
+                <li>
+                    <strong>Start using Google Tag Manager:</strong> Once the code is added to your site, you can start adding and managing tags through the Google Tag Manager interface.
+                </li>
+            </ol>
+        </section>
+
+        <!-- Google Analytics 4 Page -->
+        <section id="analytics" class="content page">
+            <h2>How to Create an Account in Google Analytics 4</h2>
+            <ol>
+                <li>
+                    <strong>Go to the Google Analytics website:</strong> Open your web browser and navigate to
+                    <a href="https://analytics.google.com" target="_blank">analytics.google.com</a>.
+                </li>
+                <li>
+                    <strong>Sign in with your Google account:</strong> If you’re not already signed in, you’ll be prompted to log in using your Google credentials.
+                </li>
+                <li>
+                    <strong>Create a new account:</strong> Click on the “Start measuring” button to create a new Google Analytics account. Enter your account name, configure your data sharing settings, and click “Next.”
+                </li>
+                <li>
+                    <strong>Set up a property:</strong> A property represents your website or app. Enter a name for your property, select your reporting time zone, and currency. Click “Next.”
+                </li>
+                <li>
+                    <strong>Set up data streams:</strong> Choose the platform you want to measure (Web, iOS, Android), and set up a data stream by entering your website URL and stream name.
+                </li>
+                <li>
+                    <strong>Install the tracking code:</strong> Google Analytics will provide you with a tracking code. Copy the code and paste it into your website’s code, typically before the closing <code>&lt;/head&gt;</code> tag.
+                </li>
+                <li>
+                    <strong>Start using Google Analytics 4:</strong> Once the code is added to your site, Google Analytics will begin collecting data, which you can view in your GA4 dashboard.
+                </li>
+            </ol>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Web Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // Set the home page as default
+        showPage('home');
+    </script>
+</body>
+
+</html>
